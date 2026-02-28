@@ -69,9 +69,9 @@ export const identifyContact = async (
   return buildResponse(primaryId, allContacts)
 }
 
-function buildResponse(primaryId: number, allContacts: any[]): ContactResponse {
-  const primary = allContacts.find(c => c.id === primaryId)!
-  const secondaries = allContacts.filter(c => c.id !== primaryId)
+function buildResponse(primaryId: number, allContacts: any[]) {
+  const primary = allContacts.find((c: any) => c.id === primaryId)!
+  const secondaries = allContacts.filter((c: any) => c.id !== primaryId)
 
   const emails = [
     primary.email,
